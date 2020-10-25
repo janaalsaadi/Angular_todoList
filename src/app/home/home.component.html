@@ -1,0 +1,77 @@
+<div>
+
+
+
+    <div class="main">
+       
+        <div class="divInfo">
+            <label>Todo</label>
+            <input
+             type = "text" class="priority " placeholder = "write your todo"  [(ngModel)]="TaskName"
+             /> 
+            </div>
+
+
+            <div class="divInfo">
+            <label>Priority</label>
+            <select  class="priority"  
+            [(ngModel)]="prior"
+            required
+              >
+           <option>high</option>
+           <option>mid</option>
+           <option>less</option>
+           </select>
+            </div>
+
+            <div>
+                <button class="item" value="save" (click) = "onAddTask()" style="marginTop:35% ; height:40%"
+                
+                [disabled] = "!TaskName && !prior"> save</button>
+           
+            </div>
+     
+
+    </div>
+
+
+
+
+
+    <div> <h1> Todo Item</h1></div>
+    <hr  />
+     <div class="Infoheader">
+         <span style="width:5%">SL</span>
+         <span style="width:25%" class="ListItem">Todo</span>
+         <span style="width:45%" class="ListItem">Date</span>
+         <span style="width:10% ; textAlign:left" >Prioity</span>
+         <span style="width:10% ; textAlign:left" >Status</span>
+         <span style="width:5%">#</span>
+
+     </div>
+   
+    <hr>
+  
+
+        <div 
+        *ngFor="let item of Task ; let i = index"
+        class="ch">
+            <span style="width:5%" class="ListItem">{{i}}</span>
+             <span style="width:25%"  class="ListItem">{{item.taskname}} </span>
+             <span style="width:45%"   class="ListItem">{{myDate | date:'full'}}</span>
+             <span style="width:10%"   class="ListItem">{{item.taskPrior}}</span>
+             <span style="width:5% ;  textAlign:left" >pinding</span>
+             <span style="width:5%" class="ListIcon">
+               <input type="button" class="btn btn-danger" value="X"  (click) = "onDeleteTask(i)" >
+             </span>
+       </div>
+
+       
+
+
+
+
+
+
+</div>
+
