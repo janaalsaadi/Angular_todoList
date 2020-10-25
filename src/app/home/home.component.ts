@@ -2,6 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HomeService} from '../shared/home.service';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -14,12 +15,12 @@ export class HomeComponent implements OnInit{
   Task = [];
   prior:string;
   myDate  = new Date();
- 
+
 
   constructor(private homservice:HomeService){}
+  
 
   onAddTask(){
-    
     const newTask = {taskname:this.TaskName, taskPrior:this.prior}
     this.homservice.addTask(newTask);
     console.log(this.Task)

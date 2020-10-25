@@ -13,7 +13,7 @@ import {HomeService} from './shared/home.service';
     HeaderComponent,
     HomeComponent,
   ],
-  imports: [BrowserModule, FormsModule ],
+  imports: [BrowserModule, FormsModule],
   providers: [HomeService],
   bootstrap: [AppComponent]
 })

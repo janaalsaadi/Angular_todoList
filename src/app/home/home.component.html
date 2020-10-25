@@ -3,7 +3,9 @@
 
 
     <div class="main">
-       
+      <div>
+        <i class="far fa-edit fa-4x"></i>
+      </div>
         <div class="divInfo">
             <label>Todo</label>
             <input
@@ -62,7 +64,11 @@
              <span style="width:10%"   class="ListItem">{{item.taskPrior}}</span>
              <span style="width:5% ;  textAlign:left" >pinding</span>
              <span style="width:5%" class="ListIcon">
-               <input type="button" class="btn btn-danger" value="X"  (click) = "onDeleteTask(i)" >
+
+                <i class="fas fa-check"></i>
+                <br>
+                <i class="fas fa-trash" (click) = "onDeleteTask(i)"></i>
+        
              </span>
        </div>
 

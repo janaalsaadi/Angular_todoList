@@ -28,6 +28,8 @@
     "bootstrap": "3.3.7",
     "core-js": "^3.1.2",
     "font-awesome": "^4.7.0",
+    "ng-bootstrap-icons": "^1.2.1",
+    "ngx-bootstrap-icons": "^1.2.0",
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.0.0",
     "tslib": "^1.9.0",
